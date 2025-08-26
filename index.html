@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maze • Generator & Solver</title>
+  <meta name="description" content="Generate mazes and solve them manually or with BFS, DFS, Dijkstra, and A*." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🌀 Maze — Generator & Solver</h1>
+    <span class="badge">HTML5 · CSS · JavaScript</span>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div>
+        <label for="rows">Rows × Columns</label>
+        <div class="row">
+          <input id="rows" type="number" min="5" max="120" value="25" />
+          <input id="cols" type="number" min="5" max="120" value="35" />
+        </div>
+      </div>
+
+      <div>
+        <label for="algo">Search algorithm</label>
+        <select id="algo">
+          <option value="bfs">BFS (breadth-first)</option>
+          <option value="dfs">DFS (depth-first)</option>
+          <option value="dijkstra">Dijkstra</option>
+          <option value="astar">A*</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="speed">Speed (steps/sec)</label>
+        <input id="speed" type="range" min="1" max="120" value="60" />
+      </div>
+
+      <div class="toolbar">
+        <button id="btnGen" class="button primary">⚙️ Generate maze</button>
+        <button id="btnClear" class="button ghost">🧹 Clear paths</button>
+      </div>
+
+      <div class="toolbar-3">
+        <button id="btnSolve" class="button ok">🤖 Solve</button>
+        <button id="btnPause" class="button ghost">⏸️ Pause</button>
+        <button id="btnStep" class="button ghost">⏭️ Step</button>
+      </div>
+
+      <div class="toolbar-3">
+        <button id="btnPickStart" class="button accent-2">🎯 Set start</button>
+        <button id="btnPickGoal" class="button accent-2">🏁 Set goal</button>
+        <button id="btnResetPlayer" class="button ghost">🧍 Reset player</button>
+      </div>
+
+      <div class="toolbar">
+        <button id="btnExport" class="button ghost">🖼️ Export PNG</button>
+        <button id="btnWireframe" class="button ghost">🔳 Toggle visited/frontier</button>
+      </div>
+
+      <p class="hint">
+        Tip: Move with <span class="kbd">WASD</span> or arrow keys. Click “Set start/goal” then click a cell.
+      </p>
+
+      <details>
+        <summary>Shortcuts & help</summary>
+        <ul>
+          <li><span class="kbd">G</span> Generate · <span class="kbd">R</span> Solve · <span class="kbd">P</span> Pause/Resume</li>
+          <li><span class="kbd">C</span> Clear · <span class="kbd">.</span> Single step</li>
+          <li><span class="kbd">I</span> Set start · <span class="kbd">O</span> Set goal</li>
+          <li>Movement: Arrows or <span class="kbd">W A S D</span></li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="canvas-wrap">
+      <canvas id="maze" width="1200" height="800"></canvas>
+      <div class="legend">
+        <span class="dot start"></span> Start
+        <span class="dot goal" style="margin-left:10px"></span> Goal
+        <span class="dot player" style="margin-left:10px"></span> Player
+        <span class="dot path" style="margin-left:10px"></span> Final path
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    No external dependencies • Algorithms: BFS, DFS, Dijkstra, A* • © 2025
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
