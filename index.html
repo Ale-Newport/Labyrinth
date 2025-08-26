@@ -3,14 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maze • Generator & Solver</title>
-  <meta name="description" content="Generate mazes and solve them manually or with BFS, DFS, Dijkstra, and A*." />
+  <title>Maze Generator & Solver</title>
+  <meta name="description" content="Generate mazes and solve them manually or with BFS, DFS, Dijkstra, A*, Greedy, Bidirectional BFS, IDDFS, and Wall Follower." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>🌀 Maze — Generator & Solver</h1>
-    <span class="badge">HTML5 · CSS · JavaScript</span>
+    <h1>Maze Generator & Solver</h1>
   </header>
 
   <main>
@@ -24,12 +23,25 @@
       </div>
 
       <div>
+        <label for="gen">Generator</label>
+        <select id="gen">
+          <option value="backtracker">Recursive Backtracker (DFS)</option>
+          <option value="prim">Randomized Prim</option>
+          <option value="kruskal">Randomized Kruskal</option>
+        </select>
+      </div>
+
+      <div>
         <label for="algo">Search algorithm</label>
         <select id="algo">
           <option value="bfs">BFS (breadth-first)</option>
           <option value="dfs">DFS (depth-first)</option>
           <option value="dijkstra">Dijkstra</option>
           <option value="astar">A*</option>
+          <option value="greedy">Greedy Best-First</option>
+          <option value="bidir-bfs">Bidirectional BFS</option>
+          <option value="iddfs">Iterative Deepening DFS</option>
+          <option value="wall-right">Wall Follower (Right-hand)</option>
         </select>
       </div>
 
@@ -87,7 +99,7 @@
   </main>
 
   <footer>
-    No external dependencies • Algorithms: BFS, DFS, Dijkstra, A* • © 2025
+    Generators: Backtracker, Prim, Kruskal • Algorithms: BFS, DFS, Dijkstra, A*, Greedy, Bidirectional BFS, IDDFS, Wall Follower • © Alejandro Newport 2025
   </footer>
 
   <script src="app.js"></script>
