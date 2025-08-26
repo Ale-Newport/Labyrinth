@@ -6,10 +6,11 @@
   <title>Maze Generator & Solver</title>
   <meta name="description" content="Generate mazes and solve them manually or with BFS, DFS, Dijkstra, A*, Greedy, Bidirectional BFS, IDDFS, and Wall Follower." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header>
-    <h1>Maze Generator & Solver</h1>
+    <h1><i class="fa-solid fa-puzzle-piece"></i> Maze Generator & Solver</h1>
   </header>
 
   <main>
@@ -51,25 +52,25 @@
       </div>
 
       <div class="toolbar">
-        <button id="btnGen" class="button primary">⚙️ Generate maze</button>
-        <button id="btnClear" class="button ghost">🧹 Clear paths</button>
+        <button id="btnGen" class="button primary"><i class="fa-solid fa-gear"></i><span>Generate maze</span></button>
+        <button id="btnClear" class="button ghost"><i class="fa-solid fa-broom"></i><span>Clear paths</span></button>
       </div>
 
       <div class="toolbar-3">
-        <button id="btnSolve" class="button ok">🤖 Solve</button>
-        <button id="btnPause" class="button ghost">⏸️ Pause</button>
-        <button id="btnStep" class="button ghost">⏭️ Step</button>
+        <button id="btnSolve" class="button ok"><i class="fa-solid fa-robot"></i><span>Solve</span></button>
+        <button id="btnPause" class="button ghost"><i class="fa-solid fa-pause"></i><span>Pause</span></button>
+        <button id="btnStep" class="button ghost"><i class="fa-solid fa-forward-step"></i><span>Step</span></button>
       </div>
 
       <div class="toolbar-3">
-        <button id="btnPickStart" class="button accent-2">🎯 Set start</button>
-        <button id="btnPickGoal" class="button accent-2">🏁 Set goal</button>
-        <button id="btnResetPlayer" class="button ghost">🧍 Reset player</button>
+        <button id="btnPickStart" class="button accent-2"><i class="fa-solid fa-bullseye"></i><span>Set start</span></button>
+        <button id="btnPickGoal" class="button accent-2"><i class="fa-solid fa-flag-checkered"></i><span>Set goal</span></button>
+        <button id="btnResetPlayer" class="button ghost"><i class="fa-solid fa-rotate-left"></i><span>Reset player</span></button>
       </div>
 
       <div class="toolbar">
-        <button id="btnExport" class="button ghost">🖼️ Export PNG</button>
-        <button id="btnWireframe" class="button ghost">🔳 Toggle visited/frontier</button>
+        <button id="btnExport" class="button ghost"><i class="fa-regular fa-file-image"></i><span>Export PNG</span></button>
+        <button id="btnWireframe" class="button ghost"><i class="fa-solid fa-border-all"></i><span>Toggle visited/frontier</span></button>
       </div>
 
       <p class="hint">

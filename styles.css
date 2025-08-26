@@ -68,6 +68,10 @@ input[type="range"]{ height:36px }
 .accent-2{ background:linear-gradient(180deg, var(--accent-2), #1fb7a4); color:#062a27 }
 .hint{ font-size:12px; color:var(--muted) }
 
+header h1 i { margin-right: 8px; opacity: .9; }
+.button i { margin-right: 8px; font-size: 0.95em; vertical-align: -1px; pointer-events: none;}
+.button span { vertical-align: middle; }
+
 .toolbar{ display:grid; grid-template-columns: 1fr 1fr; gap:8px }
 .toolbar-3{ display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px }
 
